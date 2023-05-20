@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: monospace;
+            box-sizing: border-box;
+        }
+        body{
+            background: #103131;
+        }
+        .header{
+            background-color: #007bff;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            padding: 0px 25px;
+            height: 80px;
+            align-items: center;
+        }
+        .logo img{
+            height: 40px;
+        }
+        .search input{
+            height: 35px;
+            width: 100%;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .icons{
+            text-align: right;
+        }
+        .icons .fa{
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            padding: 0px 10px;
+            transition: 0.6s;
+        }
+        .fa:hover{
+            color: black;
+        }
+        .links{
+            background-color:  #007bff;
+            display: none;
+            
+        }
+        .links a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            font-size: 18px;
+        }
+        .showmylinks{
+            display: block;
+        }
+        @media only screen and (max-width:600px){
+            .header{
+                grid-template-columns: auto auto;
+                padding: 10px 5px;
+                height: auto;
+            }
+            .logo img{
+                width: 90px;
+                height: auto;
+            }
+            .search{
+                grid-column: 2;
+                grid-row: 2;
+                grid-column: 1/span 2;
+                padding-top: 10px;
+            }
+            .icons .fa{
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="#"><img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"></a>
+        </div>
+        <div class="search">
+            <form>
+                <input type="text" placeholder="Search Here">
+            </form>
+        </div>
+        <div class="icons">
+            <a href="#" class="fa fa-heart"></a>
+            <a href="#" class="fa fa-shopping-cart"></a>
+            <a href="#" class="fa fa-user"></a>
+            <a href="#" class="fa fa-bars"></a>
+        </div>
+    </div>
+    <div class="links">
+        <a href="#">Women Garments</a>
+        <a href="#">Mens Garments</a>
+        <a href="#">Boys Shoes</a>
+        <a href="#">Girls Shoes</a>
+        <a href="#">Gifts</a>
+        <a href="#">Child Clothes</a>
+    </div>
+    <script>
+        document.getElementsByClassName("fa")[3].addEventListener("click",function(){
+            document.getElementsByClassName("links")[0].classList.toggle
+            ("showmylinks");           
+        })
+    </script>      
+</body>
+</html>
